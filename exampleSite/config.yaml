@@ -44,9 +44,13 @@ params:
   - title: Sign up
     url: /
     button: true
+  navbarlogo:
+    # Logo (from /images/___)
+    image: logos/fresh-alt.svg
+    link: /
   sidebar:
-    # Logo (from /images/logos/___.svg)
-    logo: fresh-square
+    # Logo (from /images/___)
+    logo: logos/fresh-square.svg
     sections:
     - title: User
       icon: user
@@ -134,8 +138,8 @@ params:
       job: HR Manager
       img: 3
   footer:
-    # Logo (from /images/logos/___)
-    logo: fresh-white-alt.svg
+    # Logo (from /images/___)
+    logo: logos/fresh-white-alt.svg
     # Social media links (GitHub, Twitter, etc.). All are optional.
     socialmedia:
     - link: https://github.com/lucperkins/github-fresh
