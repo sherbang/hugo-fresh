@@ -3,7 +3,11 @@
 {{- $sections := index $sidebar "sections" }}
 <div class="sidebar">
   <div class="sidebar-header">
+    {{- if $logo}}
     <img src="{{ printf "/images/%s" $logo | relURL }}">
+    {{- else }}
+    <div></div>
+    {{- end }}
     <a class="sidebar-close" href="javascript:void(0);">
       <i data-feather="x"></i>
     </a>
