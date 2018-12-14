@@ -22,7 +22,7 @@
         <div class="column is-4">
           <figure class="testimonial">
             <blockquote>
-              {{ .quote }}
+              {{ .quote | markdownify }}
             </blockquote>
             <div class="author">
               <img src="{{ printf "/images/illustrations/faces/%s.png" (string .img) | relURL }}" alt=""/>
