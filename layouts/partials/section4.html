@@ -2,6 +2,10 @@
 {{- $title    := index $section4 "title" }}
 {{- $subtitle := index $section4 "subtitle" }}
 {{- $clients  := index $section4 "clients" }}
+{{- $anchor   := index $section4 "anchor" }}
+{{- if $anchor }}
+<a id="{{ $anchor }}"></a>
+{{- end }}
 <section class="section is-medium section-secondary">
   <div class="container">
 

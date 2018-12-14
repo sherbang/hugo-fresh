@@ -4,6 +4,10 @@
 {{- $image      := index $section3 "image" }}
 {{- $buttonText := index $section3 "buttontext" }}
 {{- $buttonLink := index $section3 "buttonlink" }}
+{{- $anchor     := index $section3 "anchor" }}
+{{- if $anchor }}
+<a id="{{ $anchor }}"></a>
+{{- end }}
 <section class="section section-feature-grey is-medium">
   <div class="container">
     <div class="columns">

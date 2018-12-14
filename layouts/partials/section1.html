@@ -2,6 +2,10 @@
 {{- $title    := index $section1 "title" }}
 {{- $subtitle := index $section1 "subtitle" }}
 {{- $tiles    := index $section1 "tiles" }}
+{{- $anchor   := index $section1 "anchor" }}
+{{- if $anchor }}
+<a id="{{ $anchor }}"></a>
+{{- end }}
 <section class="section section-feature-grey is-medium">
   <div class="container">
     <div class="title-wrapper has-text-centered">

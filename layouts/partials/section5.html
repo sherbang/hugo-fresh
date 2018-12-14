@@ -1,3 +1,8 @@
+{{- $section5 := .Site.Params.section5 }}
+{{- $anchor   := index $section5 "anchor" }}
+{{- if $anchor }}
+<a id="{{ $anchor }}"></a>
+{{- end }}
 <section class="section section-light-grey is-medium">
   <div class="container">
     <div class="title-wrapper has-text-centered">
