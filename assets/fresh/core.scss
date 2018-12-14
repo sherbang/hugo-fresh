@@ -18,4 +18,5 @@ Main SCSS file / Fresh
 @import 'partials/responsive';
 @import 'partials/utils';
 @import 'partials/post';
-
+// This one is for the site to override bits of theme css.
+@import 'partials/local';
