@@ -7,26 +7,6 @@ params:
   font:
     name: "Open Sans"
     sizes: [400,600]
-  hero:
-    # Name of anchor for this section (optional)
-    anchor: Hero
-    # Main hero title
-    title: Manage. Deploy.
-    # Hero subtitle (optional)
-    subtitle: Lorem ipsum sit dolor amet is dummy text used by the typography industry
-    # Button text
-    buttontext: Get started
-    # Where the main hero button links to
-    buttonlink: "#"
-    # Hero image (from /images/___)
-    image: illustrations/worker.svg
-    # Footer logos (from /images/logos/clients/___.svg)
-    clientlogos:
-    - systek
-    - tribe
-    - kromo
-    - infinite
-    - gutwork
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
   - title: Features
@@ -84,7 +64,27 @@ params:
         url: /
       - text: App settings
         url: /
-  section1:
+  index_sections:
+  # Note: name is also used for the anchor
+  - filename: hero.html
+    # Main hero title
+    title: Manage. Deploy.
+    # Hero subtitle (optional)
+    subtitle: Lorem ipsum sit dolor amet is dummy text used by the typography industry
+    # Button text
+    buttonText: Get started
+    # Where the main hero button links to
+    buttonLink: "#"
+    # Hero image (from /images/___)
+    image: illustrations/worker.svg
+    # Footer logos (from /images/logos/clients/___.svg)
+    clientlogos:
+    - systek
+    - tribe
+    - kromo
+    - infinite
+    - gutwork
+  - filename: section1.html
     # Name of anchor for this section (optional)
     anchor: GreatPower
     title: Great power comes
@@ -105,7 +105,7 @@ params:
       text: This is some explanatory text that is on two rows
       url: /
       buttonText: Get started
-  section2:
+  - filename: section2.html
     # Name of anchor for this section (optional)
     anchor: TheBest
     title: You're here because you want the best
@@ -121,7 +121,7 @@ params:
     - title: Nomad system
       text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
       icon: mobile-feed
-  section3:
+  - filename: section3.html
     # Name of anchor for this section (optional)
     anchor: OnePlatform
     title: One platform
@@ -129,7 +129,7 @@ params:
     image: illustrations/mockups/app-mockup.png
     buttonText: Get started
     buttonLink: "#"
-  section4:
+  - filename: section4.html
     # Name of anchor for this section (optional)
     anchor: Clients
     title: Our Clients love us!
@@ -147,7 +147,7 @@ params:
       quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
       job: HR Manager
       img: 3
-  section5:
+  - filename: section5.html
     # Name of anchor for this section (optional)
     anchor: ContactUs
   footer:
