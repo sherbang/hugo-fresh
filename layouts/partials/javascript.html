@@ -1,7 +1,14 @@
 {{- $inServerMode := .Site.IsServer }}
-{{- $jsFresh := cond ($inServerMode) (resources.Get "js/fresh.js") (resources.Get "js/fresh.js" | resources.Minify) }}
+{{- $freshJs      := resources.Get "js/fresh.js" }}
+{{- $localJs      := resources.Get "js/local.js" }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://unpkg.com/feather-icons"></script>
-<script src="{{ $jsFresh.Permalink  }}"></script>
+{{- if $inServerMode }}
+{{- $js           := slice $freshJs $localJs | resources.Concat "js/bundle.js" }}
+<script src="{{ $js.Permalink  }}"></script>
+{{- else }}
+{{- $js           := slice $freshJs $localJs | resources.Concat "js/bundle.js" | resources.Minify }}
+<script src="{{ $js.Permalink  }}"></script>
+{{- end }}
 <script src="{{ "js/jquery.panelslider.min.js" | absURL }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
