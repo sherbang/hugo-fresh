@@ -1,0 +1,16 @@
+image:
+  file: .gitpod/Dockerfile
+  # Context is optional, defaults to an empty context
+  context: docker
+
+ports:
+    - port: 1313
+
+tasks:
+# hugo server with drafts enabled
+    - name: hugo -D 1313
+      # Make folder structure for testing the site
+      init: ln -s exampleSite/* . && mkdir themes && ln -s . themes/hugo-fresh
+      command: hugo server -D -p 1313 --bind 0.0.0.0 -b `gp_url.py 1313` --appendPort=false
+# Bash shell in the 3rd tab
+    - name: shell
