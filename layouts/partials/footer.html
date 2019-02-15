@@ -8,7 +8,9 @@
     <div class="columns">
       <div class="column">
         <div class="footer-logo">
-          <img src="{{ printf "/images/%s" $logo | relURL }}">
+          {{- if $logo.url }}<a href="{{ $logo.url }}">{{- end }}
+          <img src="{{ printf "%s" $logo.src | relURL }}" alt="{{ $logo.alt }}">
+          {{- if $logo.url }}</a>{{- end }}
         </div>
       </div>
       {{- range $quickLinks }}
@@ -36,7 +38,7 @@
             <nav class="level level-right is-mobile">
               <div class="level-right">
                 {{- range $socialMedia }}
-                <a class="level-item" href="{{ .link }}">
+                <a class="level-item" href="{{ .link }}" title="{{ .alt }}">
                   <span class="icon"><i class="fa fa-{{ .icon }}"></i></span>
                 </a>
                 {{- end }}

@@ -31,9 +31,10 @@ params:
     url: /
     button: true
   navbarlogo:
-    # Logo (from /images/___)
-    image: logos/fresh-alt.svg
+    # Logo
+    image: /images/logos/fresh-alt.svg
     link: /
+    alt: "Fresh"
   sidebar:
     # Logo (from /images/___)
     logo: logos/fresh-square.svg
@@ -79,8 +80,10 @@ params:
     buttonText: Get started
     # Where the main hero button links to
     buttonLink: "#"
-    # Hero image (from /images/___)
-    image: illustrations/worker.svg
+    # Hero image
+    image:
+      src: /images/illustrations/worker.svg
+      alt: worker
     # Footer logos (from /images/logos/clients/___.svg)
     clientlogos:
     - systek
@@ -155,21 +158,28 @@ params:
     # Name of anchor for this section (optional)
     anchor: ContactUs
   footer:
-    # Logo (from /images/___)
-    logo: logos/fresh-white-alt.svg
+    logo:
+        src: /images/logos/fresh-white-alt.svg
+        alt: Fresh
+        url: /
     # Social media links (GitHub, Twitter, etc.). All are optional.
     socialmedia:
     - link: https://github.com/lucperkins/github-fresh
       # Icons are from Font Awesome
       icon: github
+      alt: GitHub
     - link: https://dribbble.com/#
       icon: dribbble
+      alt: Dribble
     - link: https://facebook.com/#
       icon: facebook
+      alt: Facebook
     - link: https://twitter.com/lucperkins
       icon: twitter
+      alt: Twitter
     - link: https://bitbucket.org/#
       icon: bitbucket
+      alt: BitBucket
     bulmalogo: true
     product:
     - text: Discover features
