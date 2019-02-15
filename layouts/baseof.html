@@ -3,7 +3,7 @@
   <head>
     {{ partial "tags-head.html" . }}
     {{ partial "meta.html" . }}
-    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <title>{{ block "title" . }}{{ .Title | default .Site.Title }}{{ end }}</title>
     {{ partial "css.html" . }}
   </head>
   <body>
