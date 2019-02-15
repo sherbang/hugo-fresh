@@ -1,3 +1,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
+{{if .Site.IsServer}}
+<meta name="debug" content="true">
+{{end}}
+
+<meta name="title" content="{{ .Title | default .Site.Title }}">
+<meta name="description" content="{{ .Description | default .Site.Params.meta.description }}">
+<meta name="author" content="{{ .Site.Params.meta.author }}">
+
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}

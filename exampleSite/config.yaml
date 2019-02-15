@@ -7,6 +7,10 @@ params:
   font:
     name: "Open Sans"
     sizes: [400,600]
+  # Meta values for the homepage (these are also used as default values on other pages)
+  meta:
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    author: Lex Luthor
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
   - title: Features
