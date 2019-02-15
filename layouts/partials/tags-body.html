@@ -1,1 +1,6 @@
-<!-- Override this file for tracking tags that need to go within the site's body -->
+{{if .Site.Params.googletagid}}
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ .Site.Params.googletagid }}"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+{{end}}
