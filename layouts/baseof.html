@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode }}" class="has-navbar-fixed-top">
   <head>
     {{ partial "tags-head.html" . }}
     {{ partial "meta.html" . }}
@@ -9,7 +9,6 @@
   <body>
   {{ partial "tags-body.html" . }}
   {{ partial "navbar.html" . }}
-  {{ partial "navbar-clone.html" . }}
 
     {{ block "main" . }}
 

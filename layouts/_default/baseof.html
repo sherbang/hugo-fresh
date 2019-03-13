@@ -7,16 +7,15 @@
   </head>
   <body>
   {{ partial "navbar.html" . }}
-  {{ partial "navbar-clone.html" . }}
-  
+
   <div class="hero-body">
     <div class="container">
     {{ block "main" . }}
-    
+
     {{ end }}
     </div>
   </div>
-  
+
   {{ if .Site.Params.footer }}
   {{ partial "footer.html" . }}
   {{ end }}
