@@ -9,11 +9,11 @@
   <body>
   {{ partial "tags-body.html" . }}
   {{ partial "navbar.html" . }}
-
+    <main>
     {{ block "main" . }}
 
     {{ end }}
-
+    </main>
   {{ if .Site.Params.footer }}
   {{ partial "footer.html" . }}
   {{ end }}

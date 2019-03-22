@@ -2,6 +2,12 @@
 Navbar
 ========================================================================== */
 
+//Provide navbar padding for the main content block
+main {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
 //Navbar
 .navbar.is-fresh {
     min-height: 3.8rem;
