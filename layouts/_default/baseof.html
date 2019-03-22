@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   <head>
+    {{ partial "tags-head.html" . }}
     {{ partial "meta.html" . }}
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     {{ partial "css.html" . }}
   </head>
   <body>
+  {{ partial "tags-body.html" . }}
   {{ partial "navbar.html" . }}
 
-  <div class="hero-body">
-    <div class="container">
     {{ block "main" . }}
 
     {{ end }}
-    </div>
-  </div>
 
   {{ if .Site.Params.footer }}
   {{ partial "footer.html" . }}
