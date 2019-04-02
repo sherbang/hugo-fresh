@@ -1,11 +1,5 @@
 {{ define "main" }}
-  <div class="hero-body">
-    <div class="container">
-
     {{ range .Site.Params.index_sections }}
     {{ partial .filename .}}
     {{ end }}
-    
-    </div>
-  </div>
 {{ end }}
